@@ -1,0 +1,432 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+#container{
+    position: relative;
+    width: 100%;
+}
+
+#menubar{
+    display:flex;
+    gap: 30px;
+}
+
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 1000;
+}
+#logo img{
+    height: 55px;
+}
+#header div{
+    width: 37%;
+}
+
+
+
+#herosection{
+    background-image:url("https://rivaresorts.com/wp-content/uploads/2025/06/banner1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(252, 245, 245);
+}
+#herosection h1{
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+
+
+
+#Package {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 80px 8%;
+    background: #f3f3f3;
+}
+#Package > div:first-child {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+#Package > div:first-child::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #999;
+}
+.Block1 {
+    background: #fff;
+    height: 490px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.Block2 {
+    position: relative;
+    height: 490px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    overflow: hidden;
+    background-image: url("https://rivaresorts.com/wp-content/uploads/2025/06/rivabeachresort-img015.webp");
+    background-size: cover;
+    background-position: center;
+}
+.Block3 {
+    position: relative;
+    height: 490px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    overflow: hidden;
+    background-image: url("https://rivaresorts.com/wp-content/uploads/2025/06/rivaresort-platinum-06-1.webp");
+    background-size: cover;
+    background-position: center;
+}
+.Block4 {
+    grid-column: 1 / -1;
+    margin-top: 60px;
+    text-align: center;
+}
+.Block4 h1 {
+    margin-bottom: 20px;
+}
+.Block4 p {
+    margin: 15px 0;
+    line-height: 1.7;
+}
+
+
+
+
+
+#rooms {
+    padding: 80px 8%;
+    background: #f3f3f3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+#R1 {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+#R1 h2 {
+    font-size: 48px;
+    font-weight: 400;
+}
+#R1::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #999;
+    margin: 0 30px;
+}
+.room-card {
+    text-align: left;
+}
+.room-card img {
+    width: 100%;
+    height: 450px; 
+    object-fit: cover;
+    display: block;
+}
+.room-card h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 25px 0 15px;
+}
+.room-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+}
+
+
+ 
+
+
+/* .bgvideo{
+    position:absolute;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 70%;
+    object-fit:fill;
+}
+.videocont{
+    position: absolute;
+    left: 8px;
+    color: black; 
+} */
+
+
+
+
+#Fcl {
+    padding: 60px 8%;
+    background-color: #f4f4f4;
+}
+.facilities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.facilities-header h2 {
+    font-size: 42px;
+    font-weight: 400;
+    color: #1c1c1c;
+}
+.facilities-wrapper {
+    display: flex;
+    gap: 30px;
+}
+.facility-card {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.facility-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+
+#experience {
+    padding: 80px 8%;
+    background: #f5f5f5;
+}
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.experience-header h2 {
+    font-size: 44px;
+    font-weight: 400;
+    color: #1c1c1c;
+    position: relative;
+}
+.experience-wrapper {
+    display: flex;
+    gap: 40px;
+}
+.experience-card {
+    flex: 1;
+}
+.experience-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+.experience-card h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.experience-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+
+#Wedd {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("https://rivaresorts.com/wp-content/uploads/2025/06/enquire_banner.webp") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+#Wedd div {
+    position: relative;
+    max-width: 600px;
+    color: #ffffff;
+    z-index: 2;
+}
+#Wedd h2 {
+    font-size: 52px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+#Wedd p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #e5e5e5;
+}
+
+
+
+#Wvid {
+    background: #f3f3f3;
+    padding: 100px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.vid1 {
+    overflow: hidden;
+}
+#Wvid video {
+    width: 100%;
+    height: 600px;       
+    object-fit: cover;
+    display: block;
+}
+
+
+
+footer {
+    background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+    color: #e5e5e5;
+    padding: 80px 0 30px;
+}
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.footer-divider {
+    width: 85%;
+    margin: 50px auto 25px;
+    border-top: 1px solid #444;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 320px) {
+
+    #Package {
+        padding: 40px 5%;
+        gap: 25px;
+    }
+
+    
+    #Package > div:first-child::after {
+        display: none;
+    }
+
+    .Block1,
+    .Block2,
+    .Block3 {
+        height: 420px;
+        padding: 30px 20px;
+    }
+
+    .Block2,
+    .Block3 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .Block2 button,
+    .Block3 button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px 0;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    #Package {
+        grid-template-columns: 1fr;  
+        padding: 60px 6%;
+        gap: 40px;
+    }
+
+    #Package > div:first-child {
+        grid-column: 1 / -1;
+        align-items: center;
+    }
+
+    .Block1,
+    .Block2,
+    .Block3 {
+        height: 520px;
+        padding: 50px 40px;
+    }
+
+    .Block2,
+    .Block3 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .Block2 button,
+    .Block3 button {
+        width: auto;
+        padding: 12px 28px;
+        margin: 10px 8px;
+    }
+}
+
+
+
