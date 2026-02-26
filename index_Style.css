@@ -10,32 +10,34 @@
 
 #menubar{
     display:flex;
-    gap: 30px;
 }
-
 #header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    z-index: 1000;
 }
-#logo img{
-    height: 55px;
-}
+
 #header div{
     width: 37%;
 }
 
+header{
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+#Menu{
+    display: none;
+}
+
+
+
 
 
 #herosection{
+    position: relative;
     background-image:url("https://rivaresorts.com/wp-content/uploads/2025/06/banner1.webp");
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -44,13 +46,20 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgb(252, 245, 245);
+    color: white;
+    overflow: hidden;
+    animation: zoomHero 6s ease-in-out infinite alternate;
+}
+@keyframes zoomHero{
+    from { background-size: 100%; }
+    to { background-size: 110%; }
 }
 #herosection h1{
-    font-size: 50px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.1;
 }
 
 
@@ -172,22 +181,7 @@
 }
 
 
- 
 
-
-/* .bgvideo{
-    position:absolute;
-    margin-top: 70px;
-    margin-bottom: 60px;
-    width: 100%;
-    height: 70%;
-    object-fit:fill;
-}
-.videocont{
-    position: absolute;
-    left: 8px;
-    color: black; 
-} */
 
 
 
@@ -354,10 +348,43 @@ footer {
 
 
 
-
-
-
 @media (max-width: 320px) {
+     header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 12px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        
+    }
+    #menubar{
+        display: none;
+    }
+    #Menu{
+        display: block;
+        font-size: 22px;
+        color: black;
+    }
+    #logo img{
+        height: 36px;
+    }
+    #herosection{
+        height: 100vh;
+        padding: 0 15px;
+        margin-top: 65px;
+    }
+    #herosection h1{
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+
 
     #Package {
         padding: 40px 5%;
@@ -388,6 +415,51 @@ footer {
         margin: 10px 0;
         padding: 12px 0;
     }
+
+
+
+    #rooms{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        padding: 50px 20px;
+        gap: 30px;
+    }
+    #R1{
+        grid-column: 1 / -1;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    #R1::after{
+        display: none;
+    }
+    #R1 h2{
+        font-size: 28px;
+    }
+    #rooms .room-card{
+        display: none;
+    }
+    #rooms .room-card:nth-child(2){
+        display: block;
+    }
+    .room-card img{
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        display: block;
+    }
+    .room-card h3{
+        font-size: 22px;
+        margin: 18px 0 10px;
+    }
+    .room-card p{
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    
+  
 }
 
 
@@ -426,6 +498,42 @@ footer {
         padding: 12px 28px;
         margin: 10px 8px;
     }
+
+
+    #rooms{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 60px 40px;
+        gap: 40px;
+    }
+    #R1{
+        grid-column: 1 / -1;
+    }
+    #R1::after{
+        display: block;
+    }
+    #R1 h2{
+        font-size: 36px;
+    }
+    .room-card{
+        display: block;
+    }
+    .room-card:nth-child(4){
+        display: none;
+    }
+    .room-card img{
+        height: 360px;
+        object-fit: cover;
+    }
+    .room-card h3{
+        font-size: 24px;
+        margin: 20px 0 12px;
+    }
+    .room-card p{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
 }
 
 
